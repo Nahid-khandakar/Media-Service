@@ -1,0 +1,13 @@
+.card-title {
+    color: #f9e45b;
+    border-bottom: 3px solid #98d4d2;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+.card-btn {
+    background-color: #98d4d2;
+    border: none;
+}

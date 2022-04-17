@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Broadcast journalism",
+        "name": "Broadcast Event",
         "price": "250",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/YZYPKkf/istockphoto-1354169883-170667a.jpg"
@@ -32,7 +32,7 @@
         "name": "Write Report",
         "price": "1000",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://ibb.co/prFTkWJ"
+        "img": "https://i.ibb.co/k6CTP3Q/istockphoto-1014974702-170667a.jpg"
     },
     {
         "id": 6,
