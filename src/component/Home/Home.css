@@ -1,0 +1,12 @@
+.bg-img {
+    width: auto;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* .bg-img {
+    min-height: 100%;
+} */
