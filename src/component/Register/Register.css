@@ -13,3 +13,8 @@ form {
     font-size: 20px;
     font-weight: 500;
 }
+
+.form-link {
+    text-decoration: none;
+    color: tomato
+}

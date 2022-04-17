@@ -1,34 +1,66 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Register.css'
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init'
 
 const Register = () => {
+
+    //get data from input field
+    const nameRef = useRef('')
+    const emailRef = useRef('')
+    const passwordRef = useRef('')
+
+    //new user creat
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    //use email pass User creat system
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const name = nameRef.current.value
+        const email = emailRef.current.value
+        const password = passwordRef.current.value
+        //console.log(name, email, password)
+
+        createUserWithEmailAndPassword(email, password)
+
+    }
     return (
 
-        <Form className='w-50 mx-auto mt-3 pt-3 '>
+        <Form onSubmit={handleSubmit} className='w-50 mx-auto mt-3 pt-3'>
 
             <h2 className='form-title pb-3'>Register Here</h2>
 
             <Form.Group className="mb-3 " controlId="formBasicEmail">
 
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter name" required />
+                <Form.Control ref={nameRef} type="text" placeholder="Enter name" required />
 
             </Form.Group>
 
             <Form.Group className="mb-3 " controlId="formBasicEmail">
 
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" required />
+                <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
 
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword" >
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" required />
+                <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
             </Form.Group>
 
-            <Button type="submit" className='w-100 mt-3 p-2 form-btn bg-warning'>
+
+            <p className='mb-4'>Already Have an account??<Link to='/login' className='form-link'> Login Here</Link></p>
+
+
+            <Button type="submit" className='w-50 d-block mx-auto p-2 form-btn bg-warning'>
                 Register
             </Button>
 

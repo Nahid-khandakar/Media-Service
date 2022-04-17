@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
@@ -25,9 +26,15 @@ const Login = () => {
                 <Form.Control type="password" placeholder="Password" required />
             </Form.Group>
 
+
+
+            <p>New in Media Services?? <Link to='/register' className='form-link mx-2'>Register Here</Link></p>
+
+
             <Button type="submit" className='w-100 mt-3 p-2 form-btn bg-warning'>
                 Login
             </Button>
+
         </Form>
     );
 };

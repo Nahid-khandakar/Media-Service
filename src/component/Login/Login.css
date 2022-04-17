@@ -12,3 +12,8 @@ form {
     border: none;
     font-size: 20px;
 }
+
+.form-link {
+    text-decoration: none;
+    color: tomato
+}
