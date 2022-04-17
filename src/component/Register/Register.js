@@ -1,9 +1,12 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -11,6 +14,7 @@ const Register = () => {
     const nameRef = useRef('')
     const emailRef = useRef('')
     const passwordRef = useRef('')
+    const navigation = useNavigate()
 
     //new user creat
     const [
@@ -19,6 +23,18 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    //if ger user
+    if (user) {
+        navigation('/home')
+    }
+
+    //if any error
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+
+    }
 
     //use email pass User creat system
     const handleSubmit = (event) => {
@@ -31,6 +47,7 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password)
 
     }
+
     return (
 
         <Form onSubmit={handleSubmit} className='w-50 mx-auto mt-3 pt-3'>
@@ -63,7 +80,8 @@ const Register = () => {
             <Button type="submit" className='w-50 d-block mx-auto p-2 form-btn bg-warning'>
                 Register
             </Button>
-
+            <br />
+            {errorElement}
         </Form>
     );
 };
