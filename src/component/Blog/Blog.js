@@ -38,7 +38,7 @@ const Blog = () => {
 
             <div className='container my-3'>
                 <Card>
-                    <Card.Header className='blog-header'>Why we use Firebase? What are the alternative site of firebase? </Card.Header>
+                    <Card.Header className='blog-header'>Why are you using firebase? What other options do you have to implement authentication? </Card.Header>
                     <Card.Body className='blog-body'>
                         <blockquote className="blockquote mb-0">
                             <p>
@@ -48,7 +48,7 @@ const Blog = () => {
 
                                 <br />
                                 <br />
-                                Some google firebase alternative open source sites -
+                                Some google firebase alternative open source sites where we can implement authentication -
                                 <ul>
                                     <li>Parse</li>
                                     <li>Supabase</li>
@@ -67,11 +67,20 @@ const Blog = () => {
 
             <div className='container my-3'>
                 <Card>
-                    <Card.Header>Quote</Card.Header>
-                    <Card.Body>
+                    <Card.Header className='blog-header'>What other services does firebase provide other than authentication</Card.Header>
+                    <Card.Body className='blog-body'>
                         <blockquote className="blockquote mb-0">
                             <p>
+                                Many services firebase provides , Most useful of them are  Cloud Firestore ,Cloud Functions,Authentication,Hosting,Cloud Storage,Google Analytics,Dynamic Links,Remote Config.
+                                <br />
+                                Everyone needs notifications in their mobile applications in one way or another, for enhanced engagement with their users.
 
+                                cloud Messaging is a great tool to implement notifications, irrespective of the platform because it is fast, reliable, and scalable to handle your requests.
+                                <br />
+                                Google URL shortener in the past, but now it is renamed as Dynamic Links,This service is majorly used to generate deep links that redirect user traffic to your landing page, website, or mobile applications. They also provide custom domain names.
+                                <br />
+                                Google Analytics service provides visualization of all this information on just a single tap. Many of you might be used to this service, as it is widely used in web applications as well.
+                                <br />
                             </p>
 
                         </blockquote>
