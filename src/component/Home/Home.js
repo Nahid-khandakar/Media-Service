@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import Service from '../Service/Service';
+import Footer from '../Shared/Footer/Footer';
 import './Home.css'
 
 const Home = () => {
@@ -34,11 +35,7 @@ const Home = () => {
             </div>
 
 
-
-
-
-
-
+            <Footer></Footer>
 
         </div>
     );

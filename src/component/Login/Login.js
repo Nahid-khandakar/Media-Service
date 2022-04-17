@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Footer from '../Shared/Footer/Footer';
 import './Login.css'
 
 const Login = () => {
@@ -76,7 +77,9 @@ const Login = () => {
 
 
             {errorElement}
+
         </Form>
+
     );
 };
 

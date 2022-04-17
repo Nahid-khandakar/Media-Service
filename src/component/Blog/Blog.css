@@ -1,0 +1,12 @@
+.blog-header {
+    background-color: #f9e45b;
+    color: black;
+    font-family: monospace;
+    font-size: 23px;
+    font-weight: 500;
+
+}
+
+.blog-body {
+    text-align: justify;
+}
