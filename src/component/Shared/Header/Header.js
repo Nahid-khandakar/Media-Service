@@ -1,19 +1,39 @@
 import React from 'react';
 import './Header.css'
-import { NavBar, Nav, NavItem, Navbar, Container } from 'react-bootstrap';
+import { Nav, Navbar, Container } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const Header = () => {
+
+
+
+
     return (
-        <Navbar bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
+
+        <div className=''>
+
+            <Navbar className='header-container p-3' sticky='top' collapseOnSelect expand="lg">
+
+                <Container>
+                    <Navbar.Brand className='header-title text-white' as={Link} to='/'>Media Services</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+
+                        <Nav className=' ms-auto nav-links text-warning'>
+                            <Nav.Link as={Link} to='/home' className='text-white'>Home</Nav.Link>
+                            <Nav.Link as={Link} to='/blog' className='text-white'>Blog</Nav.Link>
+                            <Nav.Link as={Link} to='/About' className='text-white'>About</Nav.Link>
+
+                            <Nav.Link href="#deets" className='text-white'>Login</Nav.Link>
+                            <Nav.Link href="#memes" className='text-white'> Register </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+
+
+            </Navbar>
+        </div>
+
     );
 };
 

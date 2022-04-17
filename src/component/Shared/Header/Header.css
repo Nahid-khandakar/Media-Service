@@ -1,0 +1,14 @@
+.header-container {
+    background-color: #98d4d2;
+    font-size: 18px;
+}
+
+.header-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav-links :hover {
+    background-color: #f9e45b;
+    border-radius: 5px;
+}
