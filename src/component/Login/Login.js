@@ -26,6 +26,12 @@ const Login = () => {
         navigation('/about')
     }
 
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+
+    }
+
 
     const handleLogInSubmit = (event) => {
         event.preventDefault();
@@ -68,6 +74,8 @@ const Login = () => {
                 Login
             </Button>
 
+
+            {errorElement}
         </Form>
     );
 };
