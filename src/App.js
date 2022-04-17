@@ -3,7 +3,8 @@ import './App.css';
 import About from './component/About/About';
 import Blog from './component/Blog/Blog';
 import Home from './component/Home/Home';
-import Footer from './component/Shared/Footer/Footer';
+import Login from './component/Login/Login';
+
 
 import Header from './component/Shared/Header/Header';
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
 
 

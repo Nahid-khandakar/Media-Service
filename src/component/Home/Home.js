@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Service from '../Service/Service';
 import './Home.css'
@@ -18,6 +17,8 @@ const Home = () => {
 
         <div className=''>
             <Banner></Banner>
+
+            <h1 className='home-title p-3'> Services </h1>
 
             <div className='container mt-5 rounded'>
                 <div className='row'>
