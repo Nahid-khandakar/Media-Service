@@ -1,10 +1,12 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Footer from '../Shared/Footer/Footer';
 import './Login.css'
+import Loading from '../Loading/Loading'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -14,17 +16,14 @@ const Login = () => {
     const passwordRef = useRef('')
     const navigation = useNavigate()
 
+    //for login
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
+    //for reset password
+    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
 
-
-    if (user) {
-        navigation('/about')
+    if (loading || sending) {
+        return <Loading></Loading>
     }
 
     let errorElement;
@@ -33,13 +32,26 @@ const Login = () => {
 
     }
 
-
+    //check user email and pass
     const handleLogInSubmit = (event) => {
         event.preventDefault();
         const email = emailRef.current.value
         const password = passwordRef.current.value
         //console.log(email, password)
         signInWithEmailAndPassword(email, password)
+
+    }
+
+    //reset password
+    const resetPassword = async () => {
+        const email = emailRef.current.value
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Reset password link send on email')
+        }
+        else {
+            toast('something wrong')
+        }
 
     }
 
@@ -70,6 +82,7 @@ const Login = () => {
 
             <p>New in Media Services?? <Link to='/register' className='form-link mx-2'>Register Here</Link></p>
 
+            <p>Forget Password ?? <button onClick={resetPassword} className='form-link mx-2'>Reset Here</button></p>
 
             <Button type="submit" className='w-100 mt-3 p-2 form-btn bg-warning'>
                 Login
@@ -77,6 +90,7 @@ const Login = () => {
 
 
             {errorElement}
+            <ToastContainer />
 
         </Form>
 

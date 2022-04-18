@@ -15,5 +15,7 @@ form {
 
 .form-link {
     text-decoration: none;
-    color: tomato
+    color: tomato;
+    background-color: white;
+    border: none;
 }
