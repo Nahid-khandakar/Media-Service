@@ -5,11 +5,16 @@ import { Link } from "react-router-dom";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import Loading from '../../Loading/Loading';
 
 const Header = () => {
 
 
     const [user, loading, error] = useAuthState(auth);
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     const handleSignOut = () => {
         signOut(auth);
