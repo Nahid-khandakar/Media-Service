@@ -1,21 +1,24 @@
 import React from 'react';
 import './Review.css'
-import aboutMe from '../../images/aboutMe.jpg'
 
-const Review = () => {
+
+
+
+
+const Review = ({ review }) => {
+    const { name, userReview, rating, image } = review
     return (
-        <div className="row">
-            <div className="col-lg-3 col-md-6">
-                <div className='card review-card'>
-                    <div className="card-body">
-                        <img src={aboutMe} alt="" className='img-fluid rounded-circle w-50 mb-3 review-card-img' />
-                        <h3>Person name</h3>
-                        <h5>Write something</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dolorum eos aperiam.</p>
-                    </div>
+
+        <div className="col col-lg-3 col-12">
+            <div className='card review-card rounded my-3 ' >
+                <div className="card-body ">
+                    <img src={image} alt="" className='img-fluid rounded-2 w-100 d-block mx-auto review-card-img shadow-sm' />
+                    <h3 className='mt-3 text-center'>{name}</h3>
+                    <p className='review-card-text'>{userReview}</p>
                 </div>
             </div>
         </div>
+
     );
 };
 

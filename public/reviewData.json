@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Evyn Veare",
+        "userReview": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum.",
+        "rating": 5,
+        "image": "https://i.ibb.co/n6gPtNf/ezgif-com-gif-maker.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Vance Avrahamian",
+        "userReview": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "rating": 4.5,
+        "image": "https://i.ibb.co/47NvnVH/ezgif-com-gif-maker-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Doll Dillow",
+        "userReview": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis.",
+        "rating": 5,
+        "image": "https://i.ibb.co/KySmpSZ/ezgif-com-gif-maker-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Kore Kopps",
+        "userReview": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim..",
+        "rating": 5,
+        "image": "https://i.ibb.co/XYFf3DF/ezgif-com-gif-maker-4.jpg"
+    }
+]

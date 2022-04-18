@@ -15,5 +15,11 @@
 }
 
 .review-card-img {
-    margin-top: 10px;
+    margin-top: -50px;
+
+
+}
+
+.review-card-text {
+    text-align: justify;
 }

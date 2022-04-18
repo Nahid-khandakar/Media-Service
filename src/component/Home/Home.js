@@ -9,11 +9,20 @@ const Home = () => {
 
     const [services, setServices] = useState([])
 
+    const [reviews, setReviews] = useState([])
+
     useEffect(() => {
         fetch('serviceData.json')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+
+    useEffect(() => {
+        fetch('reviewData.json')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
 
     return (
 
@@ -22,7 +31,7 @@ const Home = () => {
 
             <h1 className='home-title mt-5'> Services </h1>
 
-            <div className='container mt-3 rounded'>
+            <div className='container mt-3 rounded-3'>
                 <div className='row'>
 
                     {
@@ -35,8 +44,20 @@ const Home = () => {
                 </div>
             </div>
 
+            <h1 className='home-title my-5'> Client Review </h1>
+
             <div className='container'>
-                <Review></Review>
+
+                <div className='row'>
+                    {
+                        reviews.map(review => <Review
+                            key={review.id}
+                            review={review}
+                        >
+                        </Review>)
+                    }
+                </div>
+
             </div>
 
 
