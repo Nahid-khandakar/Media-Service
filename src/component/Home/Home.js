@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
+import Review from '../Review/Review';
 import Service from '../Service/Service';
 import Footer from '../Shared/Footer/Footer';
 import './Home.css'
@@ -19,9 +20,9 @@ const Home = () => {
         <div className=''>
             <Banner></Banner>
 
-            <h1 className='home-title p-3'> Services </h1>
+            <h1 className='home-title mt-5'> Services </h1>
 
-            <div className='container mt-5 rounded'>
+            <div className='container mt-3 rounded'>
                 <div className='row'>
 
                     {
@@ -32,6 +33,10 @@ const Home = () => {
                     }
 
                 </div>
+            </div>
+
+            <div className='container'>
+                <Review></Review>
             </div>
 
 
