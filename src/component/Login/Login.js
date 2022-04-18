@@ -7,6 +7,8 @@ import './Login.css'
 import Loading from '../Loading/Loading'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogIn from '../SocialLogIn/SocialLogIn';
+
 
 const Login = () => {
 
@@ -100,6 +102,8 @@ const Login = () => {
             <Button type="submit" className='w-100 mt-3 p-2 form-btn bg-warning'>
                 Login
             </Button>
+
+            <SocialLogIn></SocialLogIn>
 
 
             {errorElement}
