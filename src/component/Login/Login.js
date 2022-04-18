@@ -13,7 +13,6 @@ import SocialLogIn from '../SocialLogIn/SocialLogIn';
 const Login = () => {
 
     //get data from input field
-    const nameRef = useRef('')
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const navigate = useNavigate()
@@ -29,13 +28,13 @@ const Login = () => {
 
 
     //for reset password
-    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     if (user) {
         navigate(from, { replace: true });
     }
 
-    if (loading || sending) {
+    if (loading) {
         return <Loading></Loading>
     }
 

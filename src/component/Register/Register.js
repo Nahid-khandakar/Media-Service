@@ -30,13 +30,13 @@ const Register = () => {
 
     //if ger user
     if (user) {
-        toast('Register Successfully,Please Check your Email')
         navigation('/login')
     }
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // if (loading) {
+    //     return <Loading></Loading>
+
+    // }
 
     //if any error
     let errorElement;
@@ -53,7 +53,13 @@ const Register = () => {
         const password = passwordRef.current.value
         //console.log(name, email, password)
 
-        createUserWithEmailAndPassword(email, password)
+        if (!error) {
+            createUserWithEmailAndPassword(email, password)
+            toast('Successfully Registered')
+        }
+        else {
+            toast('Try again')
+        }
 
     }
 
@@ -84,7 +90,6 @@ const Register = () => {
 
 
             <p className='mb-4'>Already Have an account??<Link to='/login' className='form-link'> Login Here</Link></p>
-
 
             <Button type="submit" className='w-50 d-block mx-auto p-2 form-btn bg-warning'>
                 Register
