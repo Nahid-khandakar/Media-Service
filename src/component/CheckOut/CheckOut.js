@@ -10,7 +10,7 @@ const CheckOut = () => {
     }
 
     return (
-        <div>
+        <div className='checkout-container'>
             <h1 className='text-center mt-5 p-5'>this is checkout div</h1>
             <button onClick={handleToast} className='btn btn-danger mx-auto w-25 d-block'>
                 Checkout

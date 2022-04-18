@@ -65,7 +65,7 @@ const Blog = () => {
 
             {/* question 3 */}
 
-            <div className='container my-3'>
+            <div className='container mt-3 mb-5'>
                 <Card>
                     <Card.Header className='blog-header'>What other services does firebase provide other than authentication</Card.Header>
                     <Card.Body className='blog-body'>

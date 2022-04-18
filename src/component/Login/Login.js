@@ -71,7 +71,7 @@ const Login = () => {
 
     return (
 
-        <Form onSubmit={handleLogInSubmit} className='w-50 mx-auto mt-3 pt-3 '>
+        <Form onSubmit={handleLogInSubmit} className='w-50 mx-auto mt-3 pt-3 login-container '>
 
             <h2 className='form-title pb-3'>Login</h2>
 

@@ -1,3 +1,7 @@
+.login-container {
+    min-height: 80vh;
+}
+
 .form-title {
     border-bottom: 5px solid #98d4d2;
     text-align: center;

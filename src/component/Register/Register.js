@@ -59,7 +59,7 @@ const Register = () => {
 
     return (
 
-        <Form onSubmit={handleSubmit} className='w-50 mx-auto mt-3 pt-3'>
+        <Form onSubmit={handleSubmit} className='w-50 mx-auto mt-3 pt-3 register-container'>
 
             <h2 className='form-title pb-3'>Register Here</h2>
 
