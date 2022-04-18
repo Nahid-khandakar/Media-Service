@@ -8,6 +8,8 @@ import auth from '../../firebase.init'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Loading from '../Loading/Loading';
+
 const Register = () => {
 
     //get data from input field
@@ -22,19 +24,25 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+
 
     //if ger user
     if (user) {
-        navigation('/home')
+        toast('Register Successfully,Please Check your Email')
+    }
+
+    if (loading) {
+        return <Loading></Loading>
     }
 
     //if any error
     let errorElement;
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
-
     }
+
 
     //use email pass User creat system
     const handleSubmit = (event) => {
@@ -82,6 +90,7 @@ const Register = () => {
             </Button>
             <br />
             {errorElement}
+            <ToastContainer />
         </Form>
     );
 };
