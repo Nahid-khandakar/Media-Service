@@ -103,10 +103,10 @@ const Login = () => {
                 Login
             </Button>
 
+            {errorElement}
+
             <SocialLogIn></SocialLogIn>
 
-
-            {errorElement}
             <ToastContainer />
 
         </Form>
