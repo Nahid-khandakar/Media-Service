@@ -2,28 +2,28 @@
     {
         "id": 1,
         "name": "Evyn Veare",
-        "userReview": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum.",
+        "userReview": "For some, photography is something they do to preserve moments they won’t get back. For others, it is a way of life. ",
         "rating": 5,
         "image": "https://i.ibb.co/n6gPtNf/ezgif-com-gif-maker.jpg"
     },
     {
         "id": 2,
         "name": "Vance Avrahamian",
-        "userReview": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "userReview": "First, make sure that your event is at a good location. You want to be able to find parking and get there without any trouble.",
         "rating": 4.5,
         "image": "https://i.ibb.co/47NvnVH/ezgif-com-gif-maker-2.jpg"
     },
     {
         "id": 3,
         "name": "Doll Dillow",
-        "userReview": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis.",
+        "userReview": "I was walking through the city. The winter was a difficult season. Everywhere I looked, people were crying and snowing.",
         "rating": 5,
         "image": "https://i.ibb.co/KySmpSZ/ezgif-com-gif-maker-3.jpg"
     },
     {
         "id": 4,
         "name": "Kore Kopps",
-        "userReview": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim..",
+        "userReview": "As a professor of philosophy, I was brought to a room to question two boxes to identify which one is human and which one is AI.",
         "rating": 5,
         "image": "https://i.ibb.co/XYFf3DF/ezgif-com-gif-maker-4.jpg"
     }
