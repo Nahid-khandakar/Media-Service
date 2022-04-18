@@ -31,6 +31,7 @@ const Register = () => {
     //if ger user
     if (user) {
         toast('Register Successfully,Please Check your Email')
+        navigation('/login')
     }
 
     if (loading) {

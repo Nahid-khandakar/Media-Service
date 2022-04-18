@@ -16,11 +16,18 @@ const Login = () => {
     const passwordRef = useRef('')
     const navigation = useNavigate()
 
+
+
     //for login
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
+
     //for reset password
-    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(auth);
+
+    if (user) {
+        navigation('/home')
+    }
 
     if (loading || sending) {
         return <Loading></Loading>
@@ -50,7 +57,7 @@ const Login = () => {
             toast('Reset password link send on email')
         }
         else {
-            toast('something wrong')
+            toast('Give Email Address')
         }
 
     }
@@ -83,6 +90,8 @@ const Login = () => {
             <p>New in Media Services?? <Link to='/register' className='form-link mx-2'>Register Here</Link></p>
 
             <p>Forget Password ?? <button onClick={resetPassword} className='form-link mx-2'>Reset Here</button></p>
+
+
 
             <Button type="submit" className='w-100 mt-3 p-2 form-btn bg-warning'>
                 Login
